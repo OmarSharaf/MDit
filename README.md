@@ -1,6 +1,43 @@
-# MDit
+<p align="center">
+  <img src="docs/assets/logo.svg" alt="MDit" width="300"/>
+</p>
 
-**A sleek, distraction-free Markdown editor** — live preview, workspace tools, and export. Built with **Tauri 2** and **React**.
+<p align="center">
+  <strong>A sleek, distraction-free Markdown editor</strong><br/>
+  Live preview · Workspace tools · Export · Built with Tauri 2 + React
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"/></a>
+  <a href="https://www.rust-lang.org/"><img src="https://img.shields.io/badge/Tauri-2-FFC131?logo=tauri&logoColor=white" alt="Tauri 2"/></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white" alt="React 18"/></a>
+  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/></a>
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Web-lightgrey" alt="Platform"/>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> ·
+  <a href="docs/">Documentation</a> ·
+  <a href="#quick-start">Quick start</a> ·
+  <a href="#web-vs-desktop">Web vs desktop</a> ·
+  <a href="#contributing">Contributing</a>
+</p>
+
+---
+
+<p align="center">
+  <img src="docs/assets/split-view.svg" alt="MDit split editor and preview" width="560"/>
+</p>
+
+<p align="center"><em>Write on the left, preview on the right — with linked selection and scroll sync.</em></p>
+
+---
+
+## About
+
+**MDit** is a fast, local-first Markdown editor for writers, developers, and document authors. It combines a CodeMirror-powered writing surface with a rich live preview (GFM, KaTeX, Mermaid, SVG) and professional export options.
+
+Available as a **native desktop app** (Windows) and a **web build** for quick access in the browser.
 
 > Built by [Omar S. M. Abdelfatah](https://omarsharaf.me)
 
@@ -8,95 +45,142 @@
 
 ## Features
 
+<table>
+<tr>
+<td width="50%">
+
 ### Writing & preview
+- Live **split preview** with GFM
+- **KaTeX** math & **Mermaid** diagrams
+- **Wiki links** (`[[page]]`) in workspace
+- Slash commands, Markdown lint, **Vim** keymap
+- YAML front matter & document outline
+- Presentation slide mode
 
-- **Live split preview** with GitHub Flavored Markdown (GFM)
-- **Math** (KaTeX), **Mermaid** diagrams, syntax highlighting, emoji
-- **Wiki links** (`[[page]]`) and bidirectional selection sync between editor and preview
-- **Slash commands** (`/`), Markdown lint, optional **Vim** keymap
-- **YAML front matter** panel, document outline, pinned tabs
+</td>
+<td width="50%">
 
-### Workspace (desktop)
+### Workspace *(desktop)*
+- Open **project folders** with file tree
+- **Workspace search** across all `.md` files
+- **Git status** panel for changed files
+- **GitHub import** — file, Gist, or repo
+- Snapshots, pinned tabs, split editor
 
-- Open a **project folder** with file tree, rename, and context actions
-- **Workspace search** across all markdown files
-- **Git status** panel for changed files in a repo
-- **GitHub import** — paste a file URL, Gist, or clone a public repo as a zip
+</td>
+</tr>
+<tr>
+<td>
+
+### Export
+- Self-contained **HTML**
+- **Word** (`.doc`) & **ODT**
+- Print / **PDF**
+- Publish workspace as static site
+- Custom preview CSS
+
+</td>
+<td>
 
 ### Productivity
+- Command palette & templates
+- Customizable keyboard shortcuts
+- Auto-save & session restore
+- Focus mode, light/dark theme
+- High contrast & reduced motion
 
-- Command palette, snippet templates, customizable keyboard shortcuts
-- Auto-save, session restore, local snapshots
-- Focus mode, light/dark theme, high-contrast and reduced-motion options
+</td>
+</tr>
+</table>
 
-### Export & publish
+---
 
-- HTML (self-contained), Markdown, plain text, PDF (print)
-- Word (`.doc`) and ODT export
-- Publish workspace as a static HTML site folder
+## Architecture
+
+<p align="center">
+  <img src="docs/assets/architecture.svg" alt="MDit architecture diagram" width="680"/>
+</p>
+
+<p align="center">
+  <img src="docs/assets/tech-stack.svg" alt="MDit tech stack" width="600"/>
+</p>
+
+| Layer | Technology |
+| --- | --- |
+| UI | React 18, TypeScript, Zustand |
+| Editor | CodeMirror 6 |
+| Preview | remark, rehype, KaTeX, Mermaid |
+| Desktop | Tauri 2, Rust, WebView2 |
 
 ---
 
 ## Web vs desktop
 
-| Capability | Web | Desktop (.exe / .msi) |
-| --- | --- | --- |
-| Edit & preview markdown | Yes | Yes |
-| Open single files | Yes | Yes |
-| GitHub URL import | Yes | Yes |
-| Open folder / file tree | No | Yes |
-| Workspace search | No | Yes |
-| Git panel | No | Yes |
-| Full filesystem integration | Limited | Yes |
+| Capability | Web | Desktop |
+| --- | :---: | :---: |
+| Edit & preview markdown | ✅ | ✅ |
+| Open single files | ✅ | ✅ |
+| GitHub URL import | ✅ | ✅ |
+| Open folder / file tree | ❌ | ✅ |
+| Workspace search | ❌ | ✅ |
+| Git panel | ❌ | ✅ |
+| File associations (`.md`) | ❌ | ✅ |
 
-The web build is great for trying MDit in the browser. Use the **desktop app** for full workspace and Git features.
+→ Full comparison: [docs/getting-started/web-vs-desktop.md](docs/getting-started/web-vs-desktop.md)
 
 ---
 
-## Getting started
+## Quick start
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) 18+
-- [Rust](https://www.rust-lang.org/tools/install) (desktop build only)
-- Windows: [Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) with the **Desktop development with C++** workload (desktop build only)
+- [Rust](https://www.rust-lang.org/tools/install) + [VS Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) *(desktop only)*
 
-### Install dependencies
+### Install & run
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/MDit.git
+cd MDit
 npm install
 ```
 
-### Run in the browser (development)
+**Web (development):**
 
 ```bash
 npm run dev
+# → http://localhost:1420
 ```
 
-Open [http://localhost:1420](http://localhost:1420).
-
-### Run the desktop app (development)
+**Desktop (development):**
 
 ```bash
 npm run tauri dev
 ```
 
-### Build for production
-
-**Web:**
+**Production builds:**
 
 ```bash
-npm run build
-npm run preview
+npm run build          # web → dist/
+npm run tauri build    # desktop → src-tauri/target/release/bundle/
 ```
 
-**Desktop installers:**
+→ Detailed guide: [docs/development/setup.md](docs/development/setup.md)
 
-```bash
-npm run tauri build
-```
+---
 
-Installers are written to `src-tauri/target/release/bundle/` (`.msi`, `.exe` / NSIS on Windows).
+## Documentation
+
+Full documentation lives in the [`docs/`](docs/) folder.
+
+| Section | Description |
+| --- | --- |
+| [📖 Documentation index](docs/README.md) | Start here |
+| [Getting started](docs/getting-started/installation.md) | Install, quick start, web vs desktop |
+| [User guide](docs/user-guide/interface.md) | Interface, writing, workspace, export, settings |
+| [Reference](docs/reference/keyboard-shortcuts.md) | Shortcuts & command palette |
+| [Development](docs/development/setup.md) | Setup, structure, building releases |
+| [Contributing](docs/contributing.md) | How to contribute |
 
 ---
 
@@ -107,15 +191,13 @@ Installers are written to `src-tauri/target/release/bundle/` (`.msi`, `.exe` / N
 | New file | `Ctrl+N` |
 | Open file | `Ctrl+O` |
 | Save | `Ctrl+S` |
-| Save as | `Ctrl+Shift+S` |
-| Find & replace | `Ctrl+F` |
 | Command palette | `Ctrl+Shift+P` |
-| Workspace search | `Ctrl+Shift+F` (desktop) |
+| Workspace search | `Ctrl+Shift+F` *(desktop)* |
 | Snapshots | `Ctrl+Shift+K` |
 | Toggle sidebar | `Ctrl+\` |
 | Focus mode | `F11` |
 
-Shortcuts can be customized in **Settings → Keyboard shortcuts**.
+→ Full list: [docs/reference/keyboard-shortcuts.md](docs/reference/keyboard-shortcuts.md)
 
 ---
 
@@ -123,31 +205,25 @@ Shortcuts can be customized in **Settings → Keyboard shortcuts**.
 
 ```
 MDit/
-├── src/                 # React frontend (editor, preview, UI)
-├── src-tauri/           # Tauri / Rust backend (fs, git, dialogs)
-├── public/              # Static assets
-├── dist/                # Production web build (generated)
-└── package.json
+├── docs/              # Documentation & SVG assets
+├── src/               # React frontend
+├── src-tauri/         # Tauri / Rust backend
+├── README.md
+└── LICENSE
 ```
 
----
-
-## Tech stack
-
-- **UI:** React 18, TypeScript, Zustand, CodeMirror 6
-- **Markdown:** remark/rehype, GFM, KaTeX, Mermaid
-- **Desktop:** Tauri 2, Rust
+→ Details: [docs/development/project-structure.md](docs/development/project-structure.md)
 
 ---
 
 ## Contributing
 
-Contributions are welcome. Please open an issue to discuss larger changes before submitting a pull request.
+Contributions are welcome! Please read [docs/contributing.md](docs/contributing.md) before opening a pull request.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/my-change`)
-3. Commit your changes
-4. Push and open a pull request
+1. Fork the repo
+2. Create a feature branch
+3. Make your changes and test (`npm run build`)
+4. Open a pull request
 
 ---
 
@@ -157,8 +233,9 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## Author
-
-**Omar S. M. Abdelfatah**  
-[omarsharaf.me](https://omarsharaf.me)
-# MDit
+<p align="center">
+  <img src="docs/assets/logo-mark.svg" alt="MDit" width="56"/>
+  <br/><br/>
+  <strong>MDit</strong> · Markdown, done well.<br/>
+  <a href="https://omarsharaf.me">omarsharaf.me</a>
+</p>

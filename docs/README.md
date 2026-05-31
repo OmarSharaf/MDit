@@ -58,7 +58,7 @@ Welcome to the official MDit documentation. MDit is a fast, local-first Markdown
 
 - **License:** [MIT](../LICENSE)
 - **Author:** [Omar S. M. Abdelfatah](https://omarsharaf.me)
-- **Repository:** [GitHub](https://github.com/) *(update with your repo URL)*
+- **Repository:** [github.com/OmarSharaf/MDit](https://github.com/OmarSharaf/MDit)
 
 ---
 

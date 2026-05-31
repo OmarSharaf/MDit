@@ -8,7 +8,7 @@ MDit can run in the **browser** (web build) or as a **native desktop app** (Wind
 
 ### Download
 
-Pre-built installers will be published on the [Releases](https://github.com/) page *(add your GitHub releases URL)*.
+Pre-built installers will be published on the [Releases](https://github.com/OmarSharaf/MDit/releases) page.
 
 | Platform | Format |
 | --- | --- |
@@ -47,7 +47,7 @@ The web build runs in modern browsers. No install required.
 ### Steps
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MDit.git
+git clone https://github.com/OmarSharaf/MDit.git
 cd MDit
 npm install
 ```

@@ -30,7 +30,7 @@ On Windows, install [Visual Studio Build Tools](https://visualstudio.microsoft.c
 ## Clone & install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MDit.git
+git clone https://github.com/OmarSharaf/MDit.git
 cd MDit
 npm install
 ```

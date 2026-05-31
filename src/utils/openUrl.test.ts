@@ -10,7 +10,7 @@ import { openExternalUrl } from "./openUrl";
 describe("openUrl", () => {
   beforeEach(() => {
     shellOpen.mockClear();
-    delete (window as Record<string, unknown>).__TAURI_INTERNALS__;
+    delete (window as unknown as Record<string, unknown>).__TAURI_INTERNALS__;
   });
 
   it("opens in browser when not tauri", async () => {

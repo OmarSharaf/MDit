@@ -64,7 +64,7 @@ describe("useStore", () => {
 
   it("rename pin reorder tabs", () => {
     const a = useStore.getState().createTab("a.md");
-    const b = useStore.getState().createTab("b.md");
+    useStore.getState().createTab("b.md");
     useStore.getState().renameTab(a, "renamed.md");
     useStore.getState().pinTab(a);
     const idxA = useStore.getState().tabs.findIndex((t) => t.id === a);

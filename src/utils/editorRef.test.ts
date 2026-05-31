@@ -33,7 +33,7 @@ describe("editorRef", () => {
 
   it("no-ops without view", () => {
     setEditorView(null);
-    expect(applyEditorFormat(wrapSelection)).toBeNull();
+    expect(applyEditorFormat((v, s, e) => wrapSelection(v, s, e, "**", "**"))).toBeNull();
     scrollEditorToLine(1);
   });
 });

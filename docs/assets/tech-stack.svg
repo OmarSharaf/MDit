@@ -1,24 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120" role="img" aria-label="MDit tech stack">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 120">
   <rect width="640" height="120" fill="#f8f9fc" rx="14"/>
-  <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle">
-    <rect x="24" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec"/>
-    <text x="78" y="58" font-size="12" font-weight="700" fill="#3b5bdb">React 18</text>
-    <text x="78" y="76" font-size="10" fill="#7a819c">UI layer</text>
-
-    <rect x="148" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec"/>
-    <text x="202" y="58" font-size="12" font-weight="700" fill="#3178c6">TypeScript</text>
-    <text x="202" y="76" font-size="10" fill="#7a819c">Type-safe</text>
-
-    <rect x="272" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec"/>
-    <text x="326" y="58" font-size="12" font-weight="700" fill="#7048e8">CodeMirror 6</text>
-    <text x="326" y="76" font-size="10" fill="#7a819c">Editor</text>
-
-    <rect x="396" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec"/>
-    <text x="450" y="58" font-size="12" font-weight="700" fill="#0ca678">remark</text>
-    <text x="450" y="76" font-size="10" fill="#7a819c">Markdown</text>
-
-    <rect x="520" y="32" width="96" height="56" rx="12" fill="#ffffff" stroke="#dde1ec"/>
-    <text x="568" y="58" font-size="12" font-weight="700" fill="#ffc131">Tauri 2</text>
-    <text x="568" y="76" font-size="10" fill="#7a819c">Desktop</text>
-  </g>
+  <rect x="24" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec" stroke-width="2"/>
+  <text x="78" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#3b5bdb">React 18</text>
+  <text x="78" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a819c">UI layer</text>
+  <rect x="148" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec" stroke-width="2"/>
+  <text x="202" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#3178c6">TypeScript</text>
+  <text x="202" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a819c">Type-safe</text>
+  <rect x="272" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec" stroke-width="2"/>
+  <text x="326" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#7048e8">CodeMirror 6</text>
+  <text x="326" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a819c">Editor</text>
+  <rect x="396" y="32" width="108" height="56" rx="12" fill="#ffffff" stroke="#dde1ec" stroke-width="2"/>
+  <text x="450" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#0ca678">remark</text>
+  <text x="450" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a819c">Markdown</text>
+  <rect x="520" y="32" width="96" height="56" rx="12" fill="#ffffff" stroke="#dde1ec" stroke-width="2"/>
+  <text x="568" y="58" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="700" fill="#d4a017">Tauri 2</text>
+  <text x="568" y="76" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#7a819c">Desktop</text>
 </svg>

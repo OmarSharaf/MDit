@@ -1,0 +1,89 @@
+.panel {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 4px 8px;
+}
+
+.searchIcon {
+  color: var(--txt-3);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  color: var(--txt-0);
+  outline: none;
+}
+
+.go {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: var(--r-sm);
+  background: var(--acc);
+  color: #fff;
+}
+
+.go:disabled {
+  opacity: 0.5;
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--txt-3);
+  padding: 0 4px;
+}
+
+.results {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hit {
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: var(--r-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hit:hover {
+  background: var(--bg-2);
+}
+
+.file {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--acc);
+}
+
+.excerpt {
+  font-size: 11px;
+  color: var(--txt-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty {
+  font-size: 11px;
+  color: var(--txt-3);
+  padding: 8px;
+}

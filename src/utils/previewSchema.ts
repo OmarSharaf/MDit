@@ -1,0 +1,73 @@
+import { defaultSchema } from "rehype-sanitize";
+
+const starAttrs = defaultSchema.attributes?.["*"] ?? [];
+
+const svgTagNames = [
+  "svg",
+  "g",
+  "path",
+  "circle",
+  "ellipse",
+  "rect",
+  "line",
+  "polyline",
+  "polygon",
+  "text",
+  "tspan",
+  "defs",
+  "linearGradient",
+  "radialGradient",
+  "stop",
+  "title",
+  "desc",
+  "clipPath",
+  "use",
+  "marker",
+  "symbol",
+  "foreignObject",
+] as const;
+
+const svgPaintAttrs = ["fill", "stroke", "strokeWidth", "strokeLinecap", "strokeLinejoin", "opacity"];
+
+export const previewSanitizeSchema = {
+  ...defaultSchema,
+  tagNames: [...(defaultSchema.tagNames ?? []), ...svgTagNames],
+  attributes: {
+    ...defaultSchema.attributes,
+    "*": [...starAttrs, "className", "class", "align", "style", "id"],
+    img: [...(defaultSchema.attributes?.img ?? []), "align", "width", "height", "loading"],
+    a: [...(defaultSchema.attributes?.a ?? []), "target", "rel", "title"],
+    div: [...(defaultSchema.attributes?.div ?? []), "align"],
+    p: [...(defaultSchema.attributes?.p ?? []), "align"],
+    span: [...(defaultSchema.attributes?.span ?? []), "style"],
+    td: [...(defaultSchema.attributes?.td ?? []), "align", "colspan", "rowspan"],
+    th: [...(defaultSchema.attributes?.th ?? []), "align", "colspan", "rowspan"],
+    svg: [
+      "viewBox",
+      "width",
+      "height",
+      "xmlns",
+      "role",
+      "aria-label",
+      "aria-hidden",
+      "preserveAspectRatio",
+      ...svgPaintAttrs,
+    ],
+    g: ["transform", ...svgPaintAttrs],
+    path: ["d", ...svgPaintAttrs],
+    circle: ["cx", "cy", "r", ...svgPaintAttrs],
+    ellipse: ["cx", "cy", "rx", "ry", ...svgPaintAttrs],
+    rect: ["x", "y", "width", "height", "rx", "ry", ...svgPaintAttrs],
+    line: ["x1", "y1", "x2", "y2", ...svgPaintAttrs],
+    polyline: ["points", ...svgPaintAttrs],
+    polygon: ["points", ...svgPaintAttrs],
+    text: ["x", "y", "dx", "dy", "textAnchor", "fontSize", "fontWeight", "fontFamily", ...svgPaintAttrs],
+    tspan: ["x", "y", "dx", "dy", ...svgPaintAttrs],
+    linearGradient: ["id", "x1", "y1", "x2", "y2", "gradientUnits"],
+    radialGradient: ["id", "cx", "cy", "r", "fx", "fy", "gradientUnits"],
+    stop: ["offset", "stopColor", "stopOpacity"],
+    use: ["href", "xlinkHref", "x", "y", "width", "height", ...svgPaintAttrs],
+    clipPath: ["id"],
+    marker: ["id", "viewBox", "refX", "refY", "markerWidth", "markerHeight", "orient"],
+  },
+};

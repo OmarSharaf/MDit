@@ -1,0 +1,77 @@
+.panel {
+  padding: 8px;
+}
+
+.hint {
+  font-size: 11px;
+  color: var(--txt-3);
+  padding: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--txt-0);
+  margin-bottom: 8px;
+}
+
+.clean {
+  font-size: 10px;
+  color: var(--ok);
+  font-weight: 500;
+}
+
+.dirty {
+  font-size: 10px;
+  color: var(--warn);
+  font-weight: 500;
+}
+
+.iconBtn,
+.refresh {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--txt-2);
+  padding: 4px 8px;
+  border-radius: var(--r-sm);
+}
+
+.iconBtn:hover,
+.refresh:hover {
+  background: var(--bg-2);
+  color: var(--acc);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.file {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: var(--r-sm);
+  font-size: 11px;
+  color: var(--txt-1);
+}
+
+.file:hover {
+  background: var(--bg-2);
+}
+
+.code {
+  font-family: var(--font-mono);
+  color: var(--acc);
+  min-width: 18px;
+}

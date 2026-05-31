@@ -1,0 +1,158 @@
+.tabBar {
+  display: flex;
+  align-items: stretch;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+  height: 34px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-shrink: 0;
+}
+
+.tabBar::-webkit-scrollbar {
+  height: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  min-width: 100px;
+  max-width: 200px;
+  height: 100%;
+  cursor: pointer;
+  border-right: 1px solid var(--border);
+  background: var(--bg-1);
+  color: var(--txt-2);
+  font-size: 12px;
+  font-weight: 400;
+  transition: background 0.1s, color 0.1s;
+  position: relative;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.tab:hover {
+  background: var(--bg-2);
+  color: var(--txt-1);
+}
+
+.tab.active {
+  background: var(--bg-0);
+  color: var(--txt-0);
+  font-weight: 500;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--acc);
+  border-radius: 2px 2px 0 0;
+}
+
+.tabIcon {
+  flex-shrink: 0;
+  color: inherit;
+}
+
+.tabName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dirty {
+  font-size: 10px;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: none;
+  background: transparent;
+  color: var(--txt-3);
+  opacity: 0;
+  transition: background 0.1s, color 0.1s, opacity 0.1s;
+  flex-shrink: 0;
+}
+
+.tab:hover .closeBtn,
+.tab.active .closeBtn {
+  opacity: 1;
+}
+
+.closeBtn:hover {
+  background: var(--bg-4);
+  color: var(--red);
+}
+
+.spacer {
+  flex: 1;
+}
+
+.pinned {
+  background: var(--bg-2);
+}
+
+.pinIcon {
+  flex-shrink: 0;
+  color: var(--acc);
+  opacity: 0.85;
+}
+
+.pinBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  border: none;
+  background: transparent;
+  color: var(--txt-3);
+  opacity: 0;
+  transition: background 0.1s, color 0.1s, opacity 0.1s;
+  flex-shrink: 0;
+}
+
+.tab:hover .pinBtn,
+.tab.active .pinBtn {
+  opacity: 1;
+}
+
+.pinBtn:hover {
+  background: var(--bg-4);
+  color: var(--acc);
+}
+
+.newTabBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 100%;
+  flex-shrink: 0;
+  border: none;
+  border-right: 1px solid var(--border);
+  background: transparent;
+  color: var(--txt-2);
+  transition: background 0.12s, color 0.12s;
+}
+
+.newTabBtn:hover {
+  background: var(--bg-2);
+  color: var(--acc);
+}

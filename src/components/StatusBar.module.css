@@ -1,0 +1,116 @@
+.bar {
+  height: var(--statusbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-1);
+  border-top: 1px solid var(--border);
+  padding: 0 14px;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.item {
+  color: var(--txt-2);
+  padding: 0 6px;
+  white-space: nowrap;
+  cursor: default;
+}
+
+.modeBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--acc-dim);
+  color: var(--acc);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.accent {
+  color: var(--acc);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.sep {
+  width: 1px;
+  height: 10px;
+  background: var(--bg-4);
+}
+
+.focusBtn {
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.focusBtn:hover {
+  color: var(--acc);
+}
+
+.unsaved {
+  color: var(--gold);
+}
+
+.saving {
+  color: var(--acc);
+}
+
+.saved {
+  color: var(--grn);
+}
+
+.error {
+  color: var(--red);
+}
+
+.goalMet {
+  color: var(--grn);
+}
+
+.goalWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.goalBar {
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-4);
+  overflow: hidden;
+}
+
+.goalFill {
+  display: block;
+  height: 100%;
+  background: var(--acc);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.goalFillDone {
+  background: var(--grn);
+}
+
+.aboutBtn {
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.aboutBtn:hover {
+  color: var(--acc);
+}

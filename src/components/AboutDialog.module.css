@@ -1,0 +1,190 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 320;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+
+.panel {
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-xl);
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 22px 22px 18px;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--bg-3), var(--bg-2));
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoMark {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--acc), var(--acc-2));
+  box-shadow: 0 8px 24px rgba(91, 127, 255, 0.35);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.appName {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--txt-0);
+  letter-spacing: -0.4px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--txt-2);
+  line-height: 1.4;
+}
+
+.version {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--acc);
+  margin-top: 2px;
+}
+
+.closeBtn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: none;
+  background: transparent;
+  color: var(--txt-2);
+  transition: background 0.12s, color 0.12s;
+}
+
+.closeBtn:hover {
+  background: var(--bg-4);
+  color: var(--txt-0);
+}
+
+.body {
+  padding: 18px 22px 22px;
+}
+
+.sectionTitle {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--txt-2);
+  margin-bottom: 10px;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding: 0;
+}
+
+.features li {
+  font-size: 12px;
+  color: var(--txt-1);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+
+.features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--acc);
+}
+
+.downloadSection {
+  margin-bottom: 18px;
+}
+
+.downloadHint {
+  font-size: 12px;
+  color: var(--txt-2);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.authorBlock {
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+}
+
+.authorLabel {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--txt-2);
+  margin-bottom: 6px;
+}
+
+.authorName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--txt-0);
+  margin-bottom: 6px;
+}
+
+.authorLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--acc);
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.authorLink:hover {
+  color: var(--acc-2);
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--txt-3);
+  text-align: center;
+}

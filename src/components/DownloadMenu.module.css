@@ -1,0 +1,122 @@
+.wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.wrapAbout {
+  width: 100%;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-2);
+  background: var(--bg-2);
+  color: var(--txt-1);
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.triggerAbout {
+  width: 100%;
+  height: 38px;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--acc-dim), transparent);
+  border-color: var(--acc);
+  color: var(--txt-0);
+}
+
+.triggerCorner {
+  height: 28px;
+  margin-left: 2px;
+  border-color: var(--border);
+  background: var(--bg-2);
+}
+
+.trigger:hover {
+  background: var(--bg-3);
+  border-color: var(--acc);
+  color: var(--txt-0);
+}
+
+.triggerOpen {
+  background: var(--bg-3);
+  border-color: var(--acc);
+  color: var(--txt-0);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  transition: transform 0.15s ease;
+}
+
+.menu {
+  background: var(--bg-2);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  padding: 6px;
+  z-index: 10000;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  border: none;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--txt-1);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s;
+}
+
+.item:hover:not(:disabled) {
+  background: var(--acc-dim);
+  color: var(--acc);
+}
+
+.itemPending {
+  opacity: 0.75;
+}
+
+.itemPending:hover {
+  background: var(--gold-dim);
+  color: var(--gold);
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.itemLabel {
+  font-weight: 600;
+  color: inherit;
+}
+
+.itemHint {
+  font-size: 11px;
+  color: var(--txt-2);
+}
+
+.item:hover:not(:disabled) .itemHint {
+  color: var(--txt-1);
+}
+
+.pending {
+  font-size: 10px;
+  color: var(--gold);
+  font-weight: 500;
+}

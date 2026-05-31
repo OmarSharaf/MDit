@@ -1,0 +1,75 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrap :global(.cm-theme-light),
+.wrap :global(.cm-theme-dark) {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrap :global(.cm-editor) {
+  flex: 1;
+  min-height: 0;
+  height: auto !important;
+  overflow: hidden;
+}
+
+.wrap :global(.cm-scroller) {
+  overflow: auto !important;
+  flex: 1;
+  min-height: 0;
+}
+
+.wrap :global(.cm-scroller::-webkit-scrollbar) {
+  width: 6px;
+  height: 6px;
+}
+
+.wrap :global(.cm-scroller::-webkit-scrollbar-thumb) {
+  background: var(--bg-5);
+  border-radius: 3px;
+}
+
+.typewriter :global(.cm-scroller) {
+  padding-bottom: 40vh;
+}
+
+.slashMenu {
+  position: absolute;
+  left: 32px;
+  bottom: 24px;
+  z-index: 10;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-md);
+  min-width: 200px;
+  max-height: 240px;
+  overflow: auto;
+  padding: 4px;
+}
+
+.slashMenu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: var(--txt-1);
+  border-radius: var(--r-sm);
+}
+
+.slashMenu button:hover,
+.slashActive {
+  background: var(--acc-dim);
+  color: var(--acc);
+}

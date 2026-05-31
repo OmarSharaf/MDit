@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-0: #0b0d11;
+  --bg-1: #111318;
+  --bg-2: #181b24;
+  --bg-3: #1f2330;
+  --bg-4: #272d3d;
+  --bg-5: #2f364a;
+
+  /* Accent */
+  --acc: #5b7fff;
+  --acc-dim: rgba(91, 127, 255, 0.15);
+  --acc-2: #8b5cf6;
+  --acc-3: #06d6a0;
+  --acc-3-dim: rgba(6, 214, 160, 0.15);
+
+  /* Text */
+  --txt-0: #eaedf8;
+  --txt-1: #9aa3c0;
+  --txt-2: #555d7a;
+  --txt-3: #363d52;
+
+  /* Semantic */
+  --red: #ff5f6d;
+  --red-dim: rgba(255, 95, 109, 0.15);
+  --gold: #fbbf24;
+  --gold-dim: rgba(251, 191, 36, 0.12);
+  --grn: #06d6a0;
+
+  /* Border */
+  --border: #1f2330;
+  --border-2: #272d3d;
+
+  /* Fonts */
+  --font-ui: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Titlebar height for Tauri */
+  --titlebar-h: 40px;
+  --sidebar-w: 240px;
+  --toolbar-h: 38px;
+  --statusbar-h: 28px;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-0: #ffffff;
+  --bg-1: #f6f7fb;
+  --bg-2: #eef0f6;
+  --bg-3: #e4e7f0;
+  --bg-4: #d5dae8;
+  --bg-5: #c2c9dc;
+
+  --acc: #3b5bdb;
+  --acc-dim: rgba(59, 91, 219, 0.12);
+  --acc-2: #7048e8;
+  --acc-3: #0ca678;
+  --acc-3-dim: rgba(12, 166, 120, 0.12);
+
+  --txt-0: #1a1d2e;
+  --txt-1: #4a5170;
+  --txt-2: #7a819c;
+  --txt-3: #a8aec4;
+
+  --red: #e03131;
+  --red-dim: rgba(224, 49, 49, 0.1);
+  --gold: #f08c00;
+  --gold-dim: rgba(240, 140, 0, 0.1);
+  --grn: #0ca678;
+
+  --border: #dde1ec;
+  --border-2: #c8cede;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-0);
+  color: var(--txt-0);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg-5); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--txt-3); }
+
+/* Selection */
+::selection { background: var(--acc-dim); color: var(--txt-0); }
+
+/* Focus */
+:focus-visible { outline: 1.5px solid var(--acc); outline-offset: 1px; border-radius: var(--radius); }
+
+button { cursor: pointer; font-family: var(--font-ui); }
+input, textarea { font-family: var(--font-ui); }
+
+[data-high-contrast] {
+  --txt-0: #000;
+  --txt-1: #111;
+  --txt-2: #222;
+  --border: #000;
+  --acc: #0000cc;
+}
+
+[data-theme="dark"][data-high-contrast] {
+  --txt-0: #fff;
+  --txt-1: #eee;
+  --txt-2: #ccc;
+  --border: #fff;
+  --acc: #6ea8ff;
+}
+
+[data-reduced-motion] *,
+[data-reduced-motion] *::before,
+[data-reduced-motion] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}

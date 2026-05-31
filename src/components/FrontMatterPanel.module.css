@@ -1,0 +1,52 @@
+.panel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--txt-2);
+  flex-shrink: 0;
+}
+
+.fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.key {
+  font-size: 11px;
+  color: var(--acc);
+  font-family: var(--font-mono);
+}
+
+.input {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--txt-0);
+  font-size: 12px;
+  padding: 3px 8px;
+  min-width: 120px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--acc);
+}

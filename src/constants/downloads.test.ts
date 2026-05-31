@@ -13,4 +13,13 @@ describe("downloads", () => {
     expect(isDownloadLinkReady("#")).toBe(false);
     expect(isDownloadLinkReady("https://example.com/app.exe")).toBe(true);
   });
+
+  it("ships release download urls", () => {
+    const exe = APP_DOWNLOAD_LINKS.find((l) => l.id === "exe");
+    const msi = APP_DOWNLOAD_LINKS.find((l) => l.id === "msi");
+    expect(isDownloadLinkReady(exe!.url)).toBe(true);
+    expect(isDownloadLinkReady(msi!.url)).toBe(true);
+    expect(exe!.url).toContain("/v1.0.0/");
+    expect(msi!.url).toContain(".msi");
+  });
 });

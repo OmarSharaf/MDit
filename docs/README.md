@@ -18,6 +18,7 @@ Welcome to the official MDit documentation. MDit is a fast, local-first Markdown
 | Browse all features | [Features overview](user-guide/features-overview.md) |
 | Look up keyboard shortcuts | [Keyboard shortcuts](reference/keyboard-shortcuts.md) |
 | Build from source | [Development setup](development/setup.md) |
+| SEO & Google indexing (web) | [SEO](development/seo.md) |
 | Contribute to the project | [Contributing](contributing.md) |
 
 ---

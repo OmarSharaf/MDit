@@ -8,11 +8,14 @@ MDit can run in the **browser** (web build) or as a **native desktop app** (Wind
 
 ### Download
 
-Pre-built installers will be published on the [Releases](https://github.com/OmarSharaf/MDit/releases) page.
+**[All releases](https://github.com/OmarSharaf/MDit/releases)** · [v1.0.0](https://github.com/OmarSharaf/MDit/releases/tag/v1.0.0)
 
-| Platform | Format |
-| --- | --- |
-| Windows | `.exe` (portable) or `.msi` (installer) |
+| Platform | Format | Download |
+| --- | --- | --- |
+| Windows | Setup (`.exe`) | [MDit_1.0.0_x64-setup.exe](https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64-setup.exe) |
+| Windows | MSI installer | [MDit_1.0.0_x64_en-US.msi](https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64_en-US.msi) |
+
+The web app’s **Download** menu uses the same links.
 
 ### System requirements
 

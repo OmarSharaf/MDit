@@ -20,7 +20,7 @@ npm run preview
 
 ### Deploy checklist
 
-- [ ] Set download URLs in `src/constants/downloads.ts` if offering desktop installers from the web app
+- [x] Set download URLs in `src/constants/downloads.ts` (GitHub Releases)
 - [ ] Configure your host to serve `index.html` for SPA routes (if applicable)
 - [ ] Enable HTTPS for production
 

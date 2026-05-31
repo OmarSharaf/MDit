@@ -6,22 +6,19 @@ export interface AppDownloadLink {
   url: string;
 }
 
-/**
- * Update the `url` fields below with your hosted installer links.
- * Leave empty until links are available — menu items stay visible but disabled.
- */
+/** GitHub Release v1.0.0 — https://github.com/OmarSharaf/MDit/releases/tag/v1.0.0 */
 export const APP_DOWNLOAD_LINKS: AppDownloadLink[] = [
   {
     id: "exe",
     label: "Windows (.exe)",
-    hint: "Portable executable",
-    url: "",
+    hint: "Setup installer (NSIS)",
+    url: "https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64-setup.exe",
   },
   {
     id: "msi",
     label: "Windows (.msi)",
     hint: "MSI installer package",
-    url: "",
+    url: "https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64_en-US.msi",
   },
 ];
 

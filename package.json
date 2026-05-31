@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "icons": "node scripts/sync-public-icons.mjs && node scripts/generate-og-image.mjs",
+    "icons:sync": "node scripts/sync-public-icons.mjs",
+    "icons:og": "node scripts/generate-og-image.mjs",
+    "build": "npm run icons && tsc && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -60,6 +63,7 @@
     "@vitest/coverage-v8": "^4.1.7",
     "fake-indexeddb": "^6.2.5",
     "jsdom": "^29.1.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.4.5",
     "vite": "^5.3.1",
     "vitest": "^4.1.7"

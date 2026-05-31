@@ -39,6 +39,11 @@
 
 Available as a **native desktop app** (Windows) and a **web build** for quick access in the browser.
 
+| Windows | Download |
+| --- | --- |
+| Setup (`.exe`) | [v1.0.0 x64](https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64-setup.exe) |
+| MSI installer | [v1.0.0 x64](https://github.com/OmarSharaf/MDit/releases/download/v1.0.0/MDit_1.0.0_x64_en-US.msi) |
+
 > Built by [Omar S. M. Abdelfatah](https://omarsharaf.me)
 
 ---
@@ -139,6 +144,14 @@ Both targets share one **React frontend**. The web build runs in the browser wit
 | File associations (`.md`) | ❌ | ✅ |
 
 → Full comparison: [docs/getting-started/web-vs-desktop.md](docs/getting-started/web-vs-desktop.md)
+
+### Web app (SEO & discoverability)
+
+The web build includes production-grade SEO: multi-schema JSON-LD (WebSite, SoftwareApplication, FAQ), Open Graph / Twitter cards, image sitemap, PWA manifest, and crawler-friendly `noscript` content.
+
+1. Deploy to Vercel (or any static host).
+2. Set **`VITE_SITE_URL`** to your live URL (see [`.env.example`](.env.example)).
+3. Complete [docs/development/seo.md](docs/development/seo.md) — Google Search Console, Bing, and rich-result validation.
 
 ---
 

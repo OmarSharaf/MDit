@@ -1,12 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="__SITE_LANGUAGE__" dir="ltr" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/mdit-icon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MDit</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>__SITE_TITLE__</title>
+    <meta name="title" content="__SITE_TITLE__" />
+    <meta name="description" content="__SITE_DESCRIPTION__" />
+    <meta name="keywords" content="__SITE_KEYWORDS__" />
+    <meta name="author" content="__AUTHOR_NAME__" />
+    <meta name="creator" content="__AUTHOR_NAME__" />
+    <meta name="publisher" content="__SITE_NAME__" />
+    <meta name="copyright" content="__AUTHOR_NAME__" />
+    <meta name="application-name" content="__SITE_NAME__" />
+    <meta name="generator" content="MDit" />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="__SITE_NAME__" />
+    <meta name="msapplication-TileColor" content="__THEME_COLOR__" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    <meta name="theme-color" content="__THEME_COLOR__" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1d2e" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+
+  <!-- site-verification -->
+
+    <link rel="canonical" href="__SITE_URL__/" />
+    <link rel="alternate" hreflang="en" href="__SITE_URL__/" />
+    <link rel="alternate" hreflang="x-default" href="__SITE_URL__/" />
+    <link rel="home" href="__SITE_URL__/" />
+    <link rel="author" href="__AUTHOR_URL__" />
+    <link rel="me" href="__AUTHOR_URL__" />
+    <link rel="help" href="__GITHUB_URL__" />
+    <link rel="source" href="__GITHUB_URL__" />
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="__SITE_NAME__" />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:title" content="__SITE_TITLE__" />
+    <meta property="og:description" content="__SITE_DESCRIPTION__" />
+    <meta property="og:locale" content="__SITE_LOCALE__" />
+    <meta property="og:image" content="__SITE_URL__/og-image.png" />
+    <meta property="og:image:secure_url" content="__SITE_URL__/og-image.png" />
+    <meta property="og:image:type" content="__OG_IMAGE_TYPE__" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="__OG_IMAGE_ALT__" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="__TWITTER_SITE__" />
+    <meta name="twitter:creator" content="__TWITTER_CREATOR__" />
+    <meta name="twitter:title" content="__SITE_SHORT_TITLE__" />
+    <meta name="twitter:description" content="__SITE_SHORT_DESCRIPTION__" />
+    <meta name="twitter:image" content="__SITE_URL__/og-image.png" />
+    <meta name="twitter:image:alt" content="__OG_IMAGE_ALT__" />
+
+    <meta name="DC.title" content="__SITE_TITLE__" />
+    <meta name="DC.description" content="__SITE_DESCRIPTION__" />
+    <meta name="DC.creator" content="__AUTHOR_NAME__" />
+    <meta name="DC.language" content="__SITE_LANGUAGE__" />
+
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <script type="application/ld+json">__JSON_LD__</script>
   </head>
   <body>
+    <noscript>
+      <main
+        id="mdit-seo-fallback"
+        style="
+          max-width: 42rem;
+          margin: 2rem auto;
+          padding: 0 1.5rem;
+          font-family: system-ui, Segoe UI, sans-serif;
+          line-height: 1.6;
+          color: #1a1d2e;
+        "
+      >
+        <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem">__NOSCRIPT_HEADING__</h1>
+        <p style="color: #5c6370; font-size: 1.05rem"><strong>__SITE_TAGLINE__</strong></p>
+        __NOSCRIPT_PARAGRAPHS__
+        <h2 style="font-size: 1.15rem; margin-top: 1.5rem">Features</h2>
+        <ul style="padding-left: 1.25rem">__NOSCRIPT_FEATURES__</ul>
+        <p style="margin-top: 1.5rem">
+          <a href="__SITE_URL__/" style="color: #3b5bdb">Open MDit</a>
+          ·
+          <a href="__RELEASES_URL__" style="color: #3b5bdb">Download for Windows</a>
+          ·
+          <a href="__GITHUB_URL__" style="color: #3b5bdb">Source on GitHub</a>
+        </p>
+      </main>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

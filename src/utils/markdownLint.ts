@@ -56,6 +56,8 @@ function lineDiagnostics(doc: string): Diagnostic[] {
   return diags;
 }
 
+export { lineDiagnostics };
+
 export function markdownLintExtension(enabled: boolean) {
   if (!enabled) return [];
   return [linter((view: EditorView) => lineDiagnostics(view.state.doc.toString()))];

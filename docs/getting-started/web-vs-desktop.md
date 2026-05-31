@@ -48,8 +48,18 @@ The web sidebar shows a **Quick start** panel (New file, Open file, GitHub impor
 
 ## Architecture
 
+```mermaid
+flowchart TB
+  WB[Web Browser] --> UI[React Frontend]
+  WV[WebView2 + Tauri 2] --> UI
+  UI --> BA[Browser APIs]
+  UI --> TR[Tauri IPC + Rust]
+  BA --> OS[Local disk / Git]
+  TR --> OS
+```
+
 <p align="center">
-  <img src="../assets/architecture.svg" alt="MDit architecture — shared React frontend; web uses browser APIs; desktop uses Tauri IPC and Rust" width="680"/>
+  <img src="../assets/architecture.svg" alt="MDit architecture diagram" width="640"/>
 </p>
 
 Both builds share one **React frontend**. The web path uses browser file APIs; the desktop path adds **Tauri IPC → Rust** for full workspace, Git, and native dialogs.

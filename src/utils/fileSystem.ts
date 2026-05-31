@@ -279,7 +279,7 @@ export async function watchFileMtime(
   if (!isTauri()) return null;
   try {
     const { invoke } = await import("@tauri-apps/api/core");
-    return invoke("watch_file_mtime", { path, lastMtime });
+    return await invoke("watch_file_mtime", { path, lastMtime });
   } catch {
     return null;
   }

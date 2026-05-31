@@ -98,8 +98,10 @@ Available as a **native desktop app** (Windows) and a **web build** for quick ac
 ## Architecture
 
 <p align="center">
-  <img src="docs/assets/architecture.svg" alt="MDit architecture diagram" width="680"/>
+  <img src="docs/assets/architecture.svg" alt="MDit architecture — shared React frontend; web uses browser APIs; desktop uses Tauri IPC and Rust" width="680"/>
 </p>
+
+Both targets share one **React frontend**. The web build runs in the browser with limited file APIs; the desktop build hosts the same UI in **WebView2** and calls **Rust commands** via Tauri for folders, Git, search, and native dialogs.
 
 <p align="center">
   <img src="docs/assets/tech-stack.svg" alt="MDit tech stack" width="600"/>
@@ -140,7 +142,7 @@ Available as a **native desktop app** (Windows) and a **web build** for quick ac
 ### Install & run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/MDit.git
+git clone https://github.com/OmarSharaf/MDit.git
 cd MDit
 npm install
 ```
